@@ -59,7 +59,7 @@ h2 {
 
 .proile-pic{
     width: 150px;
-    height: 150px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     display: block;
