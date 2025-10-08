@@ -72,7 +72,10 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .sub-nav-links a {
@@ -83,6 +86,8 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease;
     position: relative;
+    text-align: center;
+    display: inline-block;
 }
 
 .sub-nav-links a.active,
