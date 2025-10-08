@@ -73,13 +73,26 @@ nav {
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 150px 20px 100px;
+    padding: 120px 50px 80px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    padding-right: 50px;
+}
+
+.hero-image {
+    flex: 0 0 400px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -104,13 +117,32 @@ nav {
 
 /* Section Styling */
 section {
-    padding: 80px 50px;
+    padding: 60px 50px;
     background: white;
-    margin: 40px auto;
+    margin: 30px auto;
     max-width: 1200px;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     position: relative;
+}
+
+/* About Section - Single paragraph optimization */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Projects Section - Single project optimization */
+#projects {
+    padding: 50px 40px;
+}
+
+#projects h2 {
+    margin-bottom: 40px;
 }
 
 section::before {
@@ -146,17 +178,19 @@ h2::after {
 
 /* Project Styling */
 .project {
-    background: #f8f9fa;
-    padding: 30px;
-    margin: 30px 0;
-    border-radius: 15px;
-    border-left: 5px solid #667eea;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border-left: 6px solid #667eea;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+    border-left-color: #764ba2;
 }
 
 .project h3 {
@@ -187,6 +221,27 @@ h2::after {
     left: 0;
     color: #667eea;
     font-weight: bold;
+}
+
+/* Single Project Enhancement */
+#projects .project:only-child {
+    max-width: 800px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #667eea;
+    border-left: 6px solid #667eea;
+}
+
+#projects .project:only-child h3 {
+    color: #667eea;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#projects .project:only-child:hover {
+    border-color: #764ba2;
+    border-left-color: #764ba2;
 }
 
 /* Skills Section */
@@ -291,19 +346,19 @@ h2::after {
 
 /* Profile Picture */
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    margin: 0 auto 30px;
-    border: 5px solid white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    border: 8px solid white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */
@@ -323,12 +378,25 @@ h2::after {
     }
     
     .hero {
-        padding: 100px 20px 80px;
+        padding: 100px 20px 60px;
         min-height: 80vh;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .hero-image {
+        flex: none;
+        margin-bottom: 20px;
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .hero p {
@@ -345,7 +413,26 @@ h2::after {
     }
     
     .profile-pic {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        padding: 100px 30px 60px;
+    }
+    
+    .hero-content {
+        padding-right: 30px;
+    }
+    
+    .hero-image {
+        flex: 0 0 300px;
+    }
+    
+    .profile-pic {
+        width: 280px;
+        height: 280px;
     }
 }
