@@ -77,11 +77,12 @@ nav {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     min-height: 90vh;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    flex-wrap: nowrap;
 }
 
 .hero-content {
@@ -95,6 +96,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 400px;
 }
 
 .hero h1 {
@@ -345,18 +347,20 @@ h2::after {
 }
 
 /* Profile Picture */
-.profile-pic {
-    width: 350px;
-    height: 350px;
+.hero-image .profile-pic {
+    width: 350px !important;
+    height: 350px !important;
     border-radius: 50%;
     object-fit: cover;
     display: block;
     border: 8px solid white;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+    max-width: none;
 }
 
-.profile-pic:hover {
+.hero-image .profile-pic:hover {
     transform: scale(1.08);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
@@ -412,9 +416,9 @@ h2::after {
         font-size: 2rem;
     }
     
-    .profile-pic {
-        width: 250px;
-        height: 250px;
+    .hero-image .profile-pic {
+        width: 250px !important;
+        height: 250px !important;
     }
 }
 
@@ -428,11 +432,12 @@ h2::after {
     }
     
     .hero-image {
-        flex: 0 0 300px;
+        flex: 0 0 320px;
+        min-height: 320px;
     }
     
-    .profile-pic {
-        width: 280px;
-        height: 280px;
+    .hero-image .profile-pic {
+        width: 300px !important;
+        height: 300px !important;
     }
 }
