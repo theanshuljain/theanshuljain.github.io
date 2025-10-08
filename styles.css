@@ -413,10 +413,10 @@ section {
 }
 
 .overview-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    background: var(--bg-white);
+    /* background: var(--bg-white); */
     padding: 40px;
     border-radius: 15px;
     border-left: 5px solid var(--primary-blue);
