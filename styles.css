@@ -404,7 +404,7 @@ section {
 /* Career Overview */
 .career-overview {
     background: var(--bg-light);
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     border-radius: 20px;
     text-align: center;
@@ -413,7 +413,7 @@ section {
 }
 
 .overview-content {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     /* background: var(--bg-white); */
@@ -449,17 +449,23 @@ section {
     margin-bottom: 15px;
 }
 
-/* Learning Path & Interests */
-.learning-path,
-.blockchain-interests {
+/* Learning Path */
+.learning-path {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
 }
 
+@media (max-width: 1024px) {
+    .learning-path {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
 .learning-stage,
-.interest-area {
+.interest-area,
+.roadmap-phase {
     background: var(--bg-white);
     padding: 30px;
     border-radius: 15px;
@@ -982,11 +988,19 @@ h2::after {
     margin-bottom: 15px;
 }
 
-.roadmap-timeline {
+.roadmap-timeline,
+.blockchain-interests {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .roadmap-timeline,
+    .blockchain-interests {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 .roadmap-phase {
